@@ -208,7 +208,7 @@ def launch_music(music_file):
 
 
     
-def build_cmap(name, colors, N=100, reverse=''):
+def build_cmap(colors, N=100, reverse=''):
     from matplotlib.colors import LinearSegmentedColormap
     import matplotlib.pyplot as plt
     import matplotlib as mpl
@@ -221,7 +221,7 @@ def build_cmap(name, colors, N=100, reverse=''):
     ''' 
     if reverse == 'r':
         colors = [colors[len(colors)-1-i] for i in range(0, len(colors))]
-        cmap = LinearSegmentedColormap.from_list(name, colors, N=N)
+        cmap = LinearSegmentedColormap.from_list('name', colors, N=N)
     else:
-        cmap = LinearSegmentedColormap.from_list(name, colors, N=N)
+        cmap = LinearSegmentedColormap.from_list('name', colors, N=N)
     return cmap
